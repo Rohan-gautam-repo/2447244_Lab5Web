@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fcc203;
+}
+
+.menu-section {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #fcc204; /* Light background color for the section */
+}
+
+.menu-title {
+    color: #d64040; /* Title color */
+    font-family: 'Brush Script MT', cursive; /* Calligraphy-style font */
+    font-size: 36px; /* Bigger font size for the title */
+    margin-bottom: 30px;
+}
+
+.menu-category {
+    margin-bottom: 30px;
+}
+
+.menu-category h3 {
+    color: #d64040; /* Title color */
+    font-family: 'Brush Script MT', cursive; /* Calligraphy-style font */
+    font-size: 24px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    background-color: #fcc203;
+    padding: 20px;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures images cover the fixed height */
+    border-radius: 5px;
+}
+
+.btn-add-cart {
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+    background-color: #e71616;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Align button to the center */
+}
+
+.btn-add-cart:hover {
+    background-color: darkred;
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn-cancel, .btn-go-to-cart {
+    color: white;
+    background-color: blue;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cancel:hover, .btn-go-to-cart:hover {
+    background-color: darkblue;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bite Buzz - Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar-dark {
+            background-color: #5989c3;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h2 {
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#"><i class="fas fa-utensils"></i> Bite Buzz</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html"><i class="fas fa-user-plus"></i> Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="table.html"><i class="fas fa-tv"></i> Data</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" data-toggle="modal" data-target="#loginModal">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container text-center">
+        <h2>Bite Buzz Data</h2>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Price (USD)</th>
+                    <th>Available Quantity</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Burger</td>
+                    <td>10.99</td>
+                    <td>150</td>
+                    <td>Main Course</td>
+                </tr>
+                <tr>
+                    <td>Margherita Pizza</td>
+                    <td>12.50</td>
+                    <td>75</td>
+                    <td>Main Course</td>
+                </tr>
+                <tr>
+                    <td>Caesar Salad</td>
+                    <td>8.75</td>
+                    <td>120</td>
+                    <td>Salad</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

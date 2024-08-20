@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="html" indent="yes"/>
+
+    
+    <xsl:template match="/products">
+        <html>
+            <head>
+                <title>Product List</title>
+                
+            </head>
+            <body>
+                <div class="container">
+                    <h2 class="text-center mt-4 mb-4">Product List</h2>
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Name</th>
+                                <th>Price (USD)</th>
+                                <th>Available Quantity</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Loop through each product in the XML document -->
+                            <xsl:for-each select="product">
+                                <tr>
+                                    <td><xsl:value-of select="name"/></td>
+                                    <td><xsl:value-of select="price"/></td>
+                                    <td><xsl:value-of select="quantity"/></td>
+                                    <td><xsl:value-of select="category"/></td>
+                                </tr>
+                            </xsl:for-each>
+                        </tbody>
+                    </table>
+                </div>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>

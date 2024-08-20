@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bite Buzz - About</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch/dist/geosearch.css"/>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #5989c3;">
+            <a class="navbar-brand" href="#"><i class="fas fa-utensils"></i> Bite Buzz</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html"><i class="fas fa-user-plus"></i> Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="table.html"><i class="fas fa-tv"></i> Data</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" data-toggle="modal" data-target="#loginModal" style="padding: 6px 12px; font-size: 14px;">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>About Us</h2>
+            <p>Welcome to Bite Buzz, your number one source for all things food. We're dedicated to providing you the best of food delivery service, with a focus on dependability, customer service, and uniqueness.</p>
+            <p>Founded in 2018 by a group of food enthusiasts, Bite Buzz has come a long way from its beginnings. When we first started out, our passion for delivering fresh and tasty food drove us to start our own business.</p>
+            <p>We hope you enjoy our service as much as we enjoy offering it to you. If you have any questions or comments, please don't hesitate to contact us.</p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Our History</h3>
+                    <p>At Bite Buzz, our journey began with a mission to revolutionize the food delivery industry. Our dedication to excellence has propelled us forward, allowing us to provide top-notch service and delicious meals to our customers.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Our Policy</h3>
+                    <p>We prioritize customer satisfaction and strive to ensure a seamless experience with every order. Our policies are designed to protect your rights and ensure that you receive the best service possible.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Terms and Conditions</h3>
+                    <p>Our terms and conditions outline the rules and guidelines for using our services. We encourage you to read them carefully to understand your rights and responsibilities as a valued customer.</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="map"></div>
+            <div style="text-align: right; margin-top: 10px;">
+                <a href="https://www.google.com/maps?q=12.9292,77.6066" target="_blank">View location on Google Maps</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bite Buzz. Where Flavors Sizzle. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-geosearch/dist/geosearch.umd.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script>
+        var map = L.map('map').setView([12.9292, 77.6066], 13);
+    
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        var marker = L.marker([12.9292, 77.6066]).addTo(map)
+            .bindPopup('<b>Bite Buzz</b><br>Our Location.')
+            .openPopup();
+    
+        // Adding GeoSearch Control
+        const provider = new window.GeoSearch.OpenStreetMapProvider();
+        const searchControl = new window.GeoSearch.GeoSearchControl({
+            provider: provider,
+            style: 'bar',
+            autoClose: true,
+            keepResult: true,
+        });
+    
+        map.addControl(searchControl);
+    
+        var routeControl;
+    
+        // Handle map click to add route
+        map.on('geosearch/showlocation', function(e) {
+            if (routeControl) {
+                map.removeControl(routeControl);
+            }
+    
+            routeControl = L.Routing.control({
+                waypoints: [
+                    L.latLng(12.9292, 77.6066),  // Business location
+                    L.latLng(e.location.y, e.location.x)  // Searched location
+                ],
+                routeWhileDragging: false,
+                createMarker: function() { return null; },  // Disable the markers
+                lineOptions: {
+                    styles: [{ color: 'blue', opacity: 0.7, weight: 5 }]
+                },
+                show: false,  // Do not show the control UI
+                addWaypoints: false,  // Disable adding waypoints
+                draggableWaypoints: false,  // Disable dragging waypoints
+                fitSelectedRoutes: true,  // Zoom the map to fit the route
+                routeWhileDragging: false,  // Disable route dragging
+                collapsible: true,  // Make the control collapsible
+            }).addTo(map);
+    
+            // Hide the routing control panel completely
+            document.querySelector('.leaflet-routing-container').style.display = 'none';
+        });
+    </script>
+    
+    
+</body>
+</html>

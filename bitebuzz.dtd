@@ -1,0 +1,14 @@
+<!ENTITY Phone1 "123-456-7890">
+<!ENTITY Phone2 "987-654-3210">
+
+<!ELEMENT BiteBuzz (Restaurant)>
+<!ELEMENT Restaurant (Name, Location, ContactNumber, Email, Menu)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Location (#PCDATA)>
+<!ELEMENT ContactNumber (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Menu (Dish+)>
+<!ELEMENT Dish (Name, Price, Description)>
+<!ELEMENT Price (#PCDATA)>
+<!ATTLIST Price currency CDATA #REQUIRED>
+<!ELEMENT Description (#PCDATA)>
